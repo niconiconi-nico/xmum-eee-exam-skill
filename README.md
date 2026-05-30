@@ -1,46 +1,46 @@
 # niconiconi XMUM EEE Exam Revision Skill
 
-`note-organizer` 是 niconiconi 考试复习自用 Codex/ChatGPT skill，适用于 XMUM EEE 课程。它用于把大学 EEE、数学、概率、信号与系统、电子器件、嵌入式和 FPGA 等课程材料整理成结构化中英双语复习笔记。
+`note-organizer` is niconiconi's personal Codex/ChatGPT skill for XMUM EEE exam revision. It helps organize university EEE, mathematics, probability, signals and systems, electronic devices, embedded systems, and FPGA course materials into structured Chinese-English bilingual revision notes.
 
-It is designed for organizing lecture PDFs, PPT slides, Word documents, screenshots, formulas, worked examples, teacher solutions, lab notes, embedded-system materials, and FPGA project notes into structured Chinese-English bilingual revision notes.
+It is designed for lecture PDFs, PPT slides, Word documents, screenshots, formulas, worked examples, teacher solutions, lab notes, embedded-system materials, and FPGA project notes.
 
-## ✨ 功能特点
+## Features
 
-- 支持 PDF、PPT、Word、截图、题目、老师答案和实验材料整理。
-- 默认生成中文为主、保留英文术语的中英双语复习笔记。
-- 支持一章一章、一讲一讲、一题一题整理。
-- 适合 XMUM EEE 相关课程，例如数学、概率、信号与系统、电子器件、嵌入式、FPGA。
-- 自动整理核心概念、公式总结、例题讲解、易错点和考试重点。
-- 对不确定内容、缺失材料和 AI 补充内容进行明确标注。
+- Organizes PDFs, PPT slides, Word documents, screenshots, problem sets, teacher solutions, and lab materials.
+- Produces revision notes mainly in Chinese while preserving important English technical terms.
+- Supports chapter-by-chapter, lecture-by-lecture, and problem-by-problem organization.
+- Fits XMUM EEE courses such as mathematics, probability, signals and systems, electronic devices, embedded systems, and FPGA.
+- Extracts key concepts, formula summaries, worked examples, common mistakes, and exam focus points.
+- Marks uncertain content, missing material, and AI-added explanations clearly.
 
-## 🚀 快速开始
+## Quick Start
 
-### 1. 克隆仓库
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/niconiconi-nico/xmum-eee-exam-skill.git
 cd xmum-eee-exam-skill
 ```
 
-如果你已经在 GitHub 页面下载了 ZIP，也可以直接解压后进入该文件夹。
+If you downloaded the repository as a ZIP file from GitHub, unzip it and open the extracted folder.
 
-### 2. 安装到 Codex/ChatGPT skills 目录
+### 2. Install into your Codex/ChatGPT skills directory
 
-把 skill 文件夹复制到你的 Codex/ChatGPT skills 目录中。
+Copy this skill folder into your Codex/ChatGPT skills directory.
 
-推荐结构如下：
+Recommended layout:
 
 ```text
 <your-skills-directory>/
-└── note-organizer/
-    ├── SKILL.md
-    ├── README.md
-    ├── references/
-    ├── assets/
-    └── scripts/
+`-- note-organizer/
+    |-- SKILL.md
+    |-- README.md
+    |-- references/
+    |-- assets/
+    `-- scripts/
 ```
 
-Windows PowerShell 示例：
+Windows PowerShell example:
 
 ```powershell
 $skills = "$env:USERPROFILE\.codex\skills"
@@ -48,68 +48,69 @@ New-Item -ItemType Directory -Force -Path $skills
 Copy-Item -Recurse -Force . "$skills\note-organizer"
 ```
 
-macOS / Linux 示例：
+macOS / Linux example:
 
 ```bash
 mkdir -p ~/.codex/skills
 cp -r . ~/.codex/skills/note-organizer
 ```
 
-> 如果你的 Codex/ChatGPT skills 目录不是以上位置，请根据自己的实际环境调整路径。
+If your Codex/ChatGPT skills directory is different, adjust the destination path for your own environment.
 
-### 3. 重新加载 skill
+### 3. Reload skills
 
-安装完成后，重新打开 Codex/ChatGPT，或者新建一个会话，让系统重新扫描 skills。
+After installation, restart Codex/ChatGPT or open a new conversation so the app can rescan available skills.
 
-### 4. 使用示例
+### 4. Use the skill
 
 ```text
-用 note-organizer 整理这份 PDF，生成中英双语考试复习笔记。
+Use note-organizer to organize this PDF into Chinese-English exam revision notes.
 ```
 
 ```text
-用 note-organizer 按 lecture 一章一章整理这些讲义。
+Use note-organizer to organize these lecture slides lecture by lecture.
 ```
 
 ```text
-用 note-organizer 整理这套题，输出题目翻译、解题步骤、最终答案和易错点。
+Use note-organizer to organize this problem set with translations, solution steps, final answers, and common mistakes.
 ```
 
 ```text
-Use note-organizer to turn these lecture slides into structured bilingual revision notes.
+Use note-organizer to turn these FPGA lab notes into structured revision notes.
 ```
 
-## 📚 默认输出结构
+## Default Note Structure
 
-默认生成的笔记结构如下：
+For lecture or chapter materials, the default structure is:
 
 ```text
 # Chapter / Lecture Title
 
-## 1. Overview / 本章概览
-## 2. Key Concepts / 核心概念
-## 3. Formula Summary / 公式总结
-## 4. Detailed Explanation / 详细讲解
-## 5. Worked Examples / 例题
-## 6. Exam Focus / 考点
-## 7. Summary Checklist / 复习清单
+## 1. Overview
+## 2. Key Concepts
+## 3. Formula Summary
+## 4. Detailed Explanation
+## 5. Worked Examples
+## 6. Exam Focus
+## 7. Summary Checklist
 ```
 
-对于题目类材料，默认使用：
+For problem-based materials, the default structure is:
 
 ```text
-## Question / 题目
-## Translation / 中文翻译
-## Given / 已知条件
-## Method / 解题思路
-## Solution / 详细解答
-## Final Answer / 最终答案
-## Common Mistake / 易错点
+## Question
+## Translation
+## Given
+## Method
+## Solution
+## Final Answer
+## Common Mistake
+## Exam Focus
 ```
 
-## 🧠 适用课程
+## Supported Courses
 
-这个 skill 主要适用于 XMUM EEE 相关课程，包括但不限于：
+This skill is mainly intended for XMUM EEE-related courses, including but not limited to:
 
 - Engineering Mathematics
 - Probability and Statistics
@@ -121,45 +122,56 @@ Use note-organizer to turn these lecture slides into structured bilingual revisi
 - Microcontroller projects
 - Engineering lab reports and project notes
 
-## 📄 输出格式
+## Output Formats
 
-默认输出 Markdown 笔记。
+The default output is structured Markdown notes.
 
-如果用户明确要求，可以进一步整理为：
+When requested, the notes can also be prepared as:
 
 - Word / `.docx`
 - PDF
-- Cheat sheet / 公式表
-- Exam revision notes / 考试复习笔记
-- Worked example collection / 例题集
+- Cheat sheet
+- Formula sheet
+- Exam revision notes
+- Worked example collection
 
-PDF 或 Word 导出属于可选功能，不作为默认行为。
+PDF and Word export are optional workflows, not the default behavior.
 
-## ⚠️ 注意事项
+## Notes and Safety
 
-- 不要把老师原文大段照抄成笔记。
-- 不确定的地方必须标注“不确定”。
-- 如果材料不完整，必须说明缺少哪些内容。
-- AI 自己补充的解释必须标注为“AI 补充”。
-- 如果题目或公式看不清楚，不能乱猜，要提醒用户重新上传清晰版本。
-- 默认以考试复习为目标，而不是简单摘要。
+- Do not copy long passages from teacher materials directly into the notes.
+- Mark uncertain content clearly.
+- If material is incomplete, state what is missing.
+- Mark AI-added explanations as "AI supplement".
+- If a question, formula, screenshot, or handwritten note is unreadable, ask for a clearer upload instead of guessing.
+- Keep the output focused on exam revision, not simple summarization.
 
-## 📁 文件结构
+## Repository Structure
 
 ```text
 note-organizer/
-├── SKILL.md
-├── README.md
-├── references/
-│   ├── note_style_guide.md
-│   ├── subject_rules.md
-│   ├── output_templates.md
-│   └── examples.md
-├── assets/
-└── scripts/
+|-- SKILL.md
+|-- README.md
+|-- references/
+|   |-- note_style_guide.md
+|   |-- subject_rules.md
+|   |-- output_templates.md
+|   `-- examples.md
+|-- assets/
+`-- scripts/
 ```
 
-## 📝 License
+## Optional Markdown Export
+
+The repository includes a helper script for exporting Markdown notes when the local environment has suitable tools available:
+
+```bash
+python scripts/export_notes.py my_notes.md -o my_notes.pdf --docx-fallback
+```
+
+This helper is optional. The skill itself can still be used to organize notes without running the script.
+
+## License
 
 This is a personal study skill for niconiconi's XMUM EEE exam revision.
 Do not redistribute course materials, lecture notes, teacher solutions, or copyrighted documents without permission.
