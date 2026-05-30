@@ -1,0 +1,7 @@
+interface:
+  display_name: "Note Organizer"
+  short_description: "整理课程材料为中英双语复习笔记"
+  default_prompt: "Use $note-organizer to organize my lecture materials into bilingual revision notes and problem solutions."
+
+policy:
+  allow_implicit_invocation: true
